@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+body{ background: #F1F2F7;}
+/* #loading_box{} */
+#wrap{ position: relative; overflow: hidden; color: #333;}
+.text-center{ text-align: center;}
+.box{ padding: 15px;}
+.question_list{ font-size: 1.2em; padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid #ccc;}
+.question_list .item{ margin-bottom: 1em;}
+.question_list .item .word{ font-size: 1.2em; margin-bottom: .5em;}
+.question_list .item p{ margin-bottom: .5em;}
+.question_list .item label{ cursor: pointer;}
+.question_list .item input{ margin: 0 .5em;}
+.question_list .item input[type='text']{ padding: .2em;}
+.question_list .item .warning{ display: inline-block;}
+
+/* .question_group{ padding: 15px;} */
+.question_group .group_title{ font-size: 1.4em; font-weight: bold; padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid #ccc;}
+.question_group .group_title span{ color: #666; font-size: .8em; font-weight: normal; }
+
+.button_box{ margin: 15px 0; font-size: 1em;}
+
+.card_box{ display: inline-block; background: #fff; padding: .5em 1em; border: 1px solid #ccc;}
+
+.question_result{ display: none;}
+.question_result .title{ font-size: 1.4em; margin-bottom: 1em;}
+.question_result .total{ font-size: 1.2em; margin-bottom: .5em;}
+.question_result .comment{ border-radius: .3em; margin-bottom: .5em;}
+.question_result .comment i{ margin-right: .4em;}
+.question_result .item{ margin-bottom: .5em;}
+.question_result .item .word{ margin-bottom: .5em; font-size: 1.2em;}
+.question_result .item .select{ padding-left: 1em;}
+.question_result .item .select .correct{ color: #53bee6;}
+.question_result .item .select .error{ color: #ff6c60;}
+
+.question_result.success .result_list{ display: none; }
+
+.timer_box{ font-size: 1.2em;}
+.exam_over .question_result{ display: block;}
+.exam_over .question_list{ display: none;}
+
+.config_box{ font-size: 1.2em; max-width: 100%;}
+.config_box .box{ max-width: 400px; padding: 15px 0;}
+.config_box .title{ font-size: 1.2em;}
+.config_box .item{ margin: .5em 0;}
+.config_box .item label{ position: relative; padding-left: 7em; display: block;}
+.config_box .item label span{ position: absolute; left: 0; top: 0; display: inline-block; width: 7em;}
+.config_box .item label input,.config_box .item label select{ width: 100%;}
+.config_box .tip{ color: #666; padding: .5em; text-align: left; font-size: .9em;}
+
+.timer_fixed{ position: fixed; right: .5em; top: .5em;}
+
+.over #submit{ display: none;}
+#options{ display: none;}
+.over #options{ display: inline-block;}
+
+.over .timer_fixed{ display: none;}
+
+.config_title{ font-size: 1.6em; font-weight: bold;}
+.copyright{ color: #999; }
+
+@media (max-width: 1024px) {
+    /* body{ font-size: 1em;} */
+    /* .box{ padding: 1em;} */
+}

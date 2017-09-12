@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywordss" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>JavaScript 考试程序</title>
+    <link rel="stylesheet" type="text/css" href="style/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style/base.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <!-- Exam version: 17.0829.1 by M_King -->
+</head>
+
+<body>
+    <div id="loading_box" class="inner">Now loading...</div>
+    <div id="wrap" class="inner box hide">
+        <!-- config_wrap -->
+        <div id="config_wrap" class="text-center">
+            <div class="config_title box">JavaScript 考试程序（扩展版）</div>
+            <div id="config" class="config_box card_box">
+                <div class="title"><i class="fa fa-cog" aria-hidden="true"></i> 参数配置</div>
+                <div class="box">
+                    <div class="item">
+                        <label><span>考试时间：</span><input id="config_time" type="text" value="600" placeholder="单位：秒"></label>
+                    </div>
+                    <div class="item">
+                        <label>
+                            <span>排序方式：</span>
+                            <select id="config_random">
+                                <option value="true">随机</option>
+                                <option value="false">正常</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="item">
+                        <label><span>单选题数量：</span><input id="config_radio" type="text" value="0" placeholder="不填则显示全部"></label>
+                    </div>
+                    <div class="item">
+                        <label><span>多选题数量：</span><input id="config_check" type="text" value="0" placeholder="不填则显示全部"></label>
+                    </div>
+                    <div class="item">
+                        <label><span>填空题数量：</span><input id="config_text" type="text" value="20" placeholder="不填则显示全部"></label>
+                    </div>
+                    <div class="item">
+                        <label><span>提示次数：</span><input id="config_tip_count" type="text" value="1" placeholder="不填则没有提示"></label>
+                    </div>
+                    <div class="tip">
+                        <h2>提示</h2>
+                        <p>1、考试时间不填则无限计时；</p>
+                        <p>2、题目数量不填则显示全部，全部为0则各显示1个；</p>
+                        <p>3、只有填空题有提示功能。</p>
+                    </div>
+                </div>
+                <button type="button" id="start" class="btn btn-success"><i class="fa fa-flag" aria-hidden="true"></i> 开始</button>
+            </div>
+            <p class="copyright box">By M_King - 2017.09.03</p>
+        </div>
+        <!-- config_wrap end -->
+        <!-- box -->
+        <div id="question_wrap" class="box hide">
+            <!-- question_box -->
+            <div id="question_box"></div>
+            <!-- question_box end -->
+            <!-- timer_fixed -->
+            <div class="timer_fixed card_box">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span id="fixed_timer">--秒</span> / <span id="fixed_last_time">--秒</span>
+            </div>
+            <!-- timer_fixed end -->
+            <!-- timer_box -->
+            <div class="timer_box">
+                <i class="fa fa-clock-o" aria-hidden="true"></i> 计时：
+                <span id="timer">--秒</span> / <span id="last_time">--秒</span>
+            </div>
+            <!-- timer_box end -->
+            <!-- button_box -->
+            <div class="button_box">
+                <button type="button" id="submit" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> 确定</button>
+                <button type="button" id="reload" class="btn btn-danger"><i class="fa fa-undo" aria-hidden="true"></i> 再来一次</button>
+                <button type="button" id="options" class="btn btn-success"><i class="fa fa-cog" aria-hidden="true"></i> 修改配置</button>
+            </div>
+            <!-- button_box end -->
+        </div>
+        <!-- box end -->
+    </div>
+    <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+</body>
+
+</html>

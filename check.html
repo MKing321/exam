@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywordss" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>JavaScript 考试程序</title>
+    <link rel="stylesheet" type="text/css" href="style/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style/base.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <!-- Exam version: 17.0829.1 by M_King -->
+</head>
+
+<body>
+    <div id="loading_box" class="inner">Now loading...</div>
+    <div id="wrap" class="inner box hide">
+        
+    </div>
+    <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var data = JAVASCRIPT_DATA;
+
+            var json = {},
+                repeat = [];
+            for (var type in data) {
+                if (data.hasOwnProperty(type)) {
+                    for (var k in data[type]) {
+                        if (data[type].hasOwnProperty(k)) {
+                            //判断qid是否已存在
+                            if (json[data[type][k].qid]) {
+                                console.log('repeat');
+                                repeat.push(data[type][k]);
+                            } else {
+                                json[data[type][k].qid] = data[type][k];
+                            }
+                        }
+                    }
+                }
+            }
+            console.log('json', json);
+            console.log('repeat', repeat);
+        };
+    </script>
+</body>
+
+</html>
