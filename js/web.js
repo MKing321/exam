@@ -2,7 +2,7 @@
  * @Author: M_King 
  * @Date: 2017-09-02 12:59:20 
  * @Last Modified by: M_King
- * @Last Modified time: 2017-09-03 19:44:07
+ * @Last Modified time: 2017-09-15 13:06:22
  */
 
 /** 
@@ -12,7 +12,7 @@
  */
 
 //window ready
-window.onload = function() {
+window.addEventListener('load', function() {
     console.log('window ready');
     //计算代码运行时间
     Running(function() {
@@ -144,8 +144,8 @@ window.onload = function() {
         //随机生成文本
         function randomWord(type) {
             var data = {
-                'lose': ['没错，你就是传说中的战五渣', '用脚趾头都能想出来的问题，你居然不会', '说出来你可能不信，我家保姆都比你写的好', '听说最近保洁挺缺人的，你可以去试试'],
-                'win': ['大佬，请收下我的膝盖', '代码写的6有什么用，还不是找不到女朋友', '不要激动，一定是程序出BUG了']
+                'lose': ['失败是成功之母', '人非圣贤，孰能无过', '未来的路还很远', '再来一次吧'],
+                'win': ['大佬，请收下我的膝盖', '基本功而已', '表现不错，继续努力']
             };
             if (data[type]) {
                 return data[type].randomSort()[0];
@@ -156,7 +156,8 @@ window.onload = function() {
     });
     //隐藏loading
     loadingEnd();
-};
+    
+}, false);
 //回到顶部
 function scrollTop() {
     document.body.scrollTop = document.documentElement.scrollTop = 0
